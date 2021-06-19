@@ -34,12 +34,12 @@ export default function Home() {
         { link }
       );
       setStatus("success");
-      setMessage(response.data?.short_link);
+      setMessage(response.data ?.short_link);
     } catch (e) {
       const error = e as AxiosError<ShortenLinkError>;
       setStatus("error");
       setMessage(
-        error.response?.data?.error_description || "Something went wrong!"
+        error.response ?.data ?.error_description || "Something went wrong!"
       );
     }
   };
@@ -56,12 +56,12 @@ export default function Home() {
         <title>Link Shortner</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header>
+      <Header className={styles.header}>
         <div className={styles.logo} />
       </Header>
       <Content className={styles.content}>
         <div className={styles.shortner}>
-          <Title level={5}>Copy &amp; Paste your lengthy link</Title>
+          <Title level={5}>Copy &amp; Paste the link you want to shorten here</Title>
           <Form
             form={form}
             onFinish={onFinish}
@@ -81,7 +81,7 @@ export default function Home() {
                   ]}
                 >
                   <Input
-                    placeholder="https://my-super-long-link.com/blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah-blah"
+                    placeholder="https://my-super-long-link.com/copy-your-super-long-link-here"
                     size="large"
                   />
                 </Form.Item>
@@ -91,10 +91,10 @@ export default function Home() {
                   <Button
                     type="primary"
                     htmlType="submit"
-                    style={{ width: "100%" }}
+                    style={{ width: "100%", backgroundColor: "#266150" }}
                     size="large"
                   >
-                    Shorten!
+                    Shorten
                   </Button>
                 </Form.Item>
               </div>

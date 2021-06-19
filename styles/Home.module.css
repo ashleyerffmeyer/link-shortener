@@ -1,10 +1,13 @@
-/* // @file: https://github.com/mateuszsokola/yals/blob/main/styles/Home.module.css */
+.header{
+  background: #FDF8F5;
+}
+
 .logo {
   float: left;
   width: 120px;
   height: 30px;
   margin: 16px 24px 16px 0;
-  background: rgba(255, 255, 255, 0.3);
+  background: #FDF8F5;
 }
 
 .content {
@@ -12,11 +15,12 @@
   align-items: center;
   padding: 0 50px;
   min-height: calc(100vh - 64px - 70px);
+  background: #E8CEBF
 }
 
 .shortner {
   width: 100%;
-  background: #fff;
+  background: #FDF8F5;
   padding: 24px 20px;
 }
 
@@ -32,8 +36,12 @@
 
 .linkFieldButton {
   width: 120px;
+  color: #266150;
+  border-color: #266150;
 }
 
 .footer {
   text-align: center;
+  background-color: #FDF8F5;
+  color: #4F4846
 }
